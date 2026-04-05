@@ -104,19 +104,19 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-dark-800/50">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <section id="projects" className="py-12 sm:py-16 md:py-20 bg-dark-800/50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto px-4 sm:px-0">
             A selection of systems I've built, showcasing backend architecture, security patterns,
             and full-stack development
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
           {projects.map((project) => (
             <div
               key={project.id}
@@ -124,33 +124,33 @@ const Projects = () => {
             >
               {/* Project Image */}
               {project.image && (
-                <div className="bg-dark-900 p-4 flex items-center justify-center">
+                <div className="bg-dark-900 p-3 sm:p-4 flex items-center justify-center">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="max-h-80 w-auto object-contain rounded-lg shadow-lg"
+                    className="max-h-48 sm:max-h-64 md:max-h-80 w-auto object-contain rounded-lg shadow-lg"
                   />
                 </div>
               )}
 
-              <div className="p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-white">
+              <div className="p-4 sm:p-5 md:p-6">
+                <div className="mb-3 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-white">
                     {project.title}
                   </h3>
-                  <p className="text-go-cyan text-sm">{project.subtitle}</p>
+                  <p className="text-go-cyan text-xs sm:text-sm">{project.subtitle}</p>
                 </div>
 
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-3">
+                <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-2 sm:line-clamp-3">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-dark-700 border border-dark-600 rounded-full text-xs text-gray-300"
+                      className="px-2 py-0.5 sm:py-1 bg-dark-700 border border-dark-600 rounded-full text-[10px] sm:text-xs text-gray-300"
                     >
                       {tech}
                     </span>
@@ -158,10 +158,10 @@ const Projects = () => {
                 </div>
 
                 {/* Highlights */}
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2">
                   {project.highlights.slice(0, 4).map((highlight, i) => (
-                    <div key={i} className="flex items-center gap-1 text-xs">
-                      <span className="text-go-cyan">✓</span>
+                    <div key={i} className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs">
+                      <span className="text-go-cyan flex-shrink-0">✓</span>
                       <span className="text-gray-400 truncate">{highlight}</span>
                     </div>
                   ))}
@@ -172,22 +172,22 @@ const Projects = () => {
         </div>
 
         {/* Demo Project Link */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-4 p-6 bg-dark-800 border border-dark-700 rounded-xl">
-            <span className="text-4xl">📁</span>
-            <div className="text-left">
+        <div className="mt-8 sm:mt-12 text-center">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-dark-800 border border-dark-700 rounded-xl text-center sm:text-left">
+            <span className="text-3xl sm:text-4xl">📁</span>
+            <div>
               <h4 className="font-semibold text-white mb-1">Want to see the code?</h4>
-              <p className="text-gray-400 text-sm mb-3">
+              <p className="text-gray-400 text-xs sm:text-sm mb-3">
                 Check out the demo project showcasing patterns from VM Android Service & Go Dashboard
               </p>
               <a
                 href="https://github.com/luckyDevK/demo-backend-starter/tree/develop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-go-cyan text-dark-900 font-semibold rounded-lg hover:bg-cyan-400 transition-all text-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-go-cyan text-dark-900 font-semibold rounded-lg hover:bg-cyan-400 transition-all text-xs sm:text-sm"
               >
                 <span>View Go Backend Starter</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </a>
