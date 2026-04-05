@@ -10,7 +10,7 @@ const Experience = () => {
         'Develop Vending Machine Ticketing (BAG) supporting cash, E-wallet and QRIS payments with secure dynamic decryption and validation',
         'Develop Kasirku Gateway Dashboard as a full-stack application using Nuxt.js (Vue) and Golang with RBAC',
         'Designed multiple internal dashboard modules (Merchant, Sites ,Terminal, Analytics, Card Operator)',
-        'Developed mrBrown service (Golang, Gin) handling business logic, data aggregation, and bank settlement reporting (DKI, Mandiri, BNI, BCA, BRI) with ACID compliance',
+        'Developed backend services for MrBrown public facility system using Golang and Gin, handling business logic, data aggregation, and bank settlement reporting (DKI, Mandiri, BNI, BCA, BRI) with ACID-compliant transactions.',
         'Built vm-service-android backend in Golang with secure encryption/decryption workflows and dynamic key derivation',
         'Developed PWA for parkour membership renewal using Next.js',
       ],
