@@ -29,16 +29,16 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-dark-800/50 to-transparent" />
 
-      <div className="relative max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto px-4 sm:px-0">
             I'm currently open to new opportunities. Whether you have a question or
             just want to say hi, I'll try my best to get back to you!
           </p>
@@ -46,26 +46,26 @@ const Contact = () => {
 
         <div className="max-w-2xl mx-auto">
           {/* Contact Cards */}
-          <div className="grid gap-4 mb-12">
+          <div className="grid gap-3 sm:gap-4 mb-8 sm:mb-12">
             {contactMethods.map((method) => (
               <a
                 key={method.label}
                 href={method.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center gap-4 p-6 bg-dark-800 border border-dark-700 rounded-xl transition-all duration-300 ${method.color} hover:-translate-y-1 hover:shadow-lg`}
+                className={`flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-dark-800 border border-dark-700 rounded-xl transition-all duration-300 ${method.color} hover:-translate-y-1 hover:shadow-lg active:scale-[0.98] sm:active:scale-100`}
               >
                 {typeof method.icon === 'string' && !method.icon.includes('.svg') ? (
-                  <span className="text-3xl">{method.icon}</span>
+                  <span className="text-2xl sm:text-3xl">{method.icon}</span>
                 ) : (
-                  <img src={method.icon as string} alt={method.label} className="w-8 h-8" />
+                  <img src={method.icon as string} alt={method.label} className="w-6 h-6 sm:w-8 sm:h-8" />
                 )}
-                <div className="flex-1">
-                  <p className="text-gray-500 text-sm">{method.label}</p>
-                  <p className="text-white font-medium">{method.value}</p>
+                <div className="flex-1 min-w-0">
+                  <p className="text-gray-500 text-xs sm:text-sm">{method.label}</p>
+                  <p className="text-white font-medium text-sm sm:text-base truncate">{method.value}</p>
                 </div>
                 <svg
-                  className="w-5 h-5 text-gray-500"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -82,32 +82,32 @@ const Contact = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center p-8 bg-gradient-to-r from-go-cyan/10 via-cyan-500/10 to-teal-500/10 border border-go-cyan/30 rounded-xl">
-            <h3 className="text-xl font-semibold text-white mb-3">
+          <div className="text-center p-5 sm:p-6 md:p-8 bg-gradient-to-r from-go-cyan/10 via-cyan-500/10 to-teal-500/10 border border-go-cyan/30 rounded-xl">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
               Let's Build Something Amazing Together
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-base mb-4 sm:mb-6 px-2 sm:px-0">
               I'm always excited to work on challenging fullstack projects,
               especially those involving security, system optimization, or financial systems.
             </p>
             <a
               href="mailto:verylucky065@gmail.com"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-go-cyan text-dark-900 font-semibold rounded-lg hover:bg-cyan-400 transition-all hover:shadow-lg hover:shadow-go-cyan/25"
+              className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-go-cyan text-dark-900 font-semibold rounded-lg hover:bg-cyan-400 transition-all hover:shadow-lg hover:shadow-go-cyan/25 text-sm sm:text-base active:scale-95 sm:active:scale-100"
             >
               <span>Say Hello</span>
-              <span className="text-xl">👋</span>
+              <span className="text-lg sm:text-xl">👋</span>
             </a>
           </div>
         </div>
 
         {/* Footer */}
-        <footer className="mt-20 pt-8 border-t border-dark-700">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <footer className="mt-12 sm:mt-16 md:mt-20 pt-6 sm:pt-8 border-t border-dark-700">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             <div className="flex items-center gap-2">
-              <span className="font-semibold gradient-text">Very Lucky</span>
+              <span className="font-semibold gradient-text text-sm sm:text-base">Very Lucky</span>
             </div>
-            
-            <p className="text-gray-600 text-sm">
+
+            <p className="text-gray-600 text-xs sm:text-sm">
               © {new Date().getFullYear()} All rights reserved
             </p>
           </div>
